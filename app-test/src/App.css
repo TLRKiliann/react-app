@@ -1,4 +1,50 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: darkblue;
+  color: white;
 }
 
+.App {
+
+  margin-top: 20px;
+  text-align: center;
+  border: 2px solid yellow;
+}
+
+#first--div {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid white;
+}
+
+#second--div {
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid orange;
+}
+
+#third--div {
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid orange;
+}
+
+#func--div {
+  border: 2px solid lightskyblue;
+}
