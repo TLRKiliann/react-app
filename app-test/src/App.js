@@ -28,7 +28,7 @@ class App extends React.Component {
     } = this.state;
 
     const someStuff = {
-      title: "My test",
+      title: "My Test",
       name: "Juda",
       decrease: (e) => {this.decrement(e)}
     };
@@ -64,8 +64,8 @@ const CallFunction = (props) => {
   return (
     <div id="func--div">
 
-      <h2 id={`${id}-for ever`}>{`${id}-props.title`}</h2>
-      {`${legendary}-props.name`}
+      <h2 id={`${id}-for ever`}>{`${id}-${props.title}`}</h2>
+      {`${legendary}-${props.name}`}
 
       <button type="button" onClick={(e) => {props.decrease(e)}}>
         -

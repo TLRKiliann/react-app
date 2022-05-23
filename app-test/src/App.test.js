@@ -3,11 +3,11 @@ import userEvent from "@testing-library/user-event";
 import App from './App';
 
 
-test('renders SessionTester', () => {
+test('renders My Test', () => {
   render(<App />);
 
-  const linkElement = screen.getByText(/My test/i);
-  expect(linkElement).toHaveTextContent(/My test/i);
+  const linkElement = screen.getByText(/My Test/i);
+  expect(linkElement).toHaveTextContent(/My Test/i);
 });
 
 test('renders Juda', () => {
