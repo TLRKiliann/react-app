@@ -14,7 +14,7 @@ body {
 }
 
 #first--div {
-  width: 30%;
+  width: 20%;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -23,16 +23,6 @@ body {
   border: 2px solid white;
 }
 
-#second--div {
-  width: 30%;
-  margin: auto;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  border: 2px solid orange;
-}
 
 #third--div {
   width: 30%;
@@ -48,3 +38,6 @@ body {
 #func--div {
   border: 2px solid lightskyblue;
 }
+
+
+

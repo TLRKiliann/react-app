@@ -12,21 +12,26 @@ class App extends React.Component {
     this.decrement = this.decrement.bind(this);
   }
 
-   increment = () => {
+  increment = () => {
     const { count } = this.state;
-    this.setState({count: count + 1});
-    }
-
-  decrement() {
-    const { count } = this.state;
-    this.setState({count: count - 1});
+    this.setState({ count: count + 1 });
   }
 
+  decrement = () => {
+    const { count } = this.state;
+    this.setState({ count: count - 1 });
+  }
 
   render() {
     const {
       count
     } = this.state;
+
+    const someStuff = {
+      title: "My test",
+      name: "Juda",
+      decrease: (e) => {this.decrement(e)}
+    };
 
     return (
 
@@ -38,17 +43,13 @@ class App extends React.Component {
             +
           </button>
 
-          <div id="second--div">
+          <div id="second--div" title="Display">
             {count}
           </div>
 
-          <button onClick={(e) => {this.decrement(e)}}>
-            -
-          </button>
-
         </div>
 
-        <CallFunction id="third--div" />
+        <CallFunction id="third--div" {...someStuff} />
 
       </div>
     );
@@ -57,12 +58,21 @@ class App extends React.Component {
 
 const CallFunction = (props) => {
 
-  return (
+  const id = props.title.toLowerCase()
+  const legendary = props.name.toUpperCase();
 
+  return (
     <div id="func--div">
-  
+
+      <h2 id={`${id}-for ever`}>{`${id}-props.title`}</h2>
+      {`${legendary}-props.name`}
+
+      <button type="button" onClick={(e) => {props.decrease(e)}}>
+        -
+      </button>
+
     </div>
-  
+
   );
 }
 
