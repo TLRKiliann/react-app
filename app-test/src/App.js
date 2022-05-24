@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 
 
+// Two manner to call buttons from differents components.
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -9,6 +11,7 @@ class App extends React.Component {
       count: 0
     }
     this.increment = this.increment.bind(this);
+    // decrement don't need to be bind !
     //this.decrement = this.decrement.bind(this);
   }
 
@@ -17,10 +20,9 @@ class App extends React.Component {
     this.setState({ count: count + 1 });
   }
 
-  decrement = (e) => {
+  decrement = () => {
     const { count } = this.state;
     this.setState({ count: count - 1 });
-    e.preventDefault();
   }
 
   render() {
@@ -31,7 +33,8 @@ class App extends React.Component {
     const someStuff = {
       title: "My Test",
       name: "Juda",
-      decrease: ((e) => {this.decrement(e)})
+      // this decrement is called from here !
+      decrease: (this.decrement)
     };
 
     return (
@@ -62,6 +65,7 @@ const CallFunction = (props) => {
   const id = props.title.toLowerCase()
   const legendary = props.name.toUpperCase();
 
+  // props decrese is called from here
   return (
     <div id="func--div">
 
