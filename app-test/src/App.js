@@ -9,7 +9,7 @@ class App extends React.Component {
       count: 0
     }
     this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
+    //this.decrement = this.decrement.bind(this);
   }
 
   increment = () => {
@@ -17,9 +17,10 @@ class App extends React.Component {
     this.setState({ count: count + 1 });
   }
 
-  decrement = () => {
+  decrement = (e) => {
     const { count } = this.state;
     this.setState({ count: count - 1 });
+    e.preventDefault();
   }
 
   render() {
@@ -30,7 +31,7 @@ class App extends React.Component {
     const someStuff = {
       title: "My Test",
       name: "Juda",
-      decrease: (e) => {this.decrement(e)}
+      decrease: ((e) => {this.decrement(e)})
     };
 
     return (
@@ -39,7 +40,7 @@ class App extends React.Component {
         
         <div id="first--div">
 
-          <button type="button" onClick={(e) => {this.increment(e)}}>
+          <button type="button" onClick={this.increment}>
             +
           </button>
 
@@ -67,7 +68,7 @@ const CallFunction = (props) => {
       <h2 id={`${id}-for ever`}>{`${id}-${props.title}`}</h2>
       {`${legendary}-${props.name}`}
 
-      <button type="button" onClick={(e) => {props.decrease(e)}}>
+      <button type="button" onClick={props.decrease}>
         -
       </button>
 
