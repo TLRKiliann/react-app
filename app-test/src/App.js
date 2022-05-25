@@ -48,12 +48,12 @@ class App extends React.Component {
           </button>
 
           <div id="second--div" title="Display">
-            {count}
+            Counter: {count}
           </div>
 
-        </div>
+          <CallFunction id="third--div" {...someStuff} />
 
-        <CallFunction id="third--div" {...someStuff} />
+        </div>
 
       </div>
     );
@@ -69,7 +69,7 @@ const CallFunction = (props) => {
   return (
     <div id="func--div">
 
-      <h2 id={`${id}-for ever`}>{`${id}-${props.title}`}</h2>
+      <h2 id={`${id}-for ever`} >{`${id}-${props.title}`}</h2>
       {`${legendary}-${props.name}`}
 
       <button type="button" onClick={props.decrease}>
